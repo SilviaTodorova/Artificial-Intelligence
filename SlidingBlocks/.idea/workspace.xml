@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="cea2dc52-d179-4aec-aa2d-78a5c37d94e2" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../TSP/src/bg/sofia/uni/fmi/mjt/City.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TSP/src/bg/sofia/uni/fmi/mjt/GeneticAlgorithm.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TSP/src/bg/sofia/uni/fmi/mjt/Individual.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TSP/src/bg/sofia/uni/fmi/mjt/Population.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TSP/src/bg/sofia/uni/fmi/mjt/Route.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TSP/src/bg/sofia/uni/fmi/mjt/TSP.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NQueens/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../NQueens/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NQueens/out/production/NQueens/com/nqueens/problem/MinConflictAlgorithm.class" beforeDir="false" afterPath="$PROJECT_DIR$/../NQueens/out/production/NQueens/com/nqueens/problem/MinConflictAlgorithm.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NQueens/src/com/nqueens/problem/MinConflictAlgorithm.java" beforeDir="false" afterPath="$PROJECT_DIR$/../NQueens/src/com/nqueens/problem/MinConflictAlgorithm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/npuzzle inputs.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SlidingBlocks/SlidingBlockGame.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SlidingBlocks/SlidingBlockGame.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SlidingBlocks/com/game/slindingblocks/IDAStarAlgorithm.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SlidingBlocks/com/game/slindingblocks/IDAStarAlgorithm.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SlidingBlocks/com/game/slindingblocks/Node.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SlidingBlocks/com/game/slindingblocks/Node.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SlidingBlockGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SlidingBlockGame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/game/slindingblocks/IDAStarAlgorithm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/game/slindingblocks/IDAStarAlgorithm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/game/slindingblocks/Node.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/game/slindingblocks/Node.java" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Enum" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="1SsJsatczbQoBxSa6PCauimVhxa" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1572377545010" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../NQueens" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="SlidingBlockGame" />
+      <module name="SlidingBlocks" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="cea2dc52-d179-4aec-aa2d-78a5c37d94e2" name="Default Changelist" comment="" />
+      <created>1571281222794</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1571281222794</updated>
+      <workItem from="1571281227777" duration="948000" />
+      <workItem from="1571330320560" duration="5422000" />
+      <workItem from="1571418223906" duration="4087000" />
+      <workItem from="1571492432967" duration="31751000" />
+      <workItem from="1571683281500" duration="437000" />
+      <workItem from="1571686545142" duration="297000" />
+      <workItem from="1571687078822" duration="74000" />
+      <workItem from="1571717340780" duration="1345000" />
+      <workItem from="1571758825509" duration="8338000" />
+      <workItem from="1571835219069" duration="4458000" />
+      <workItem from="1571840712261" duration="5000" />
+      <workItem from="1571858816223" duration="735000" />
+      <workItem from="1571925496425" duration="14962000" />
+      <workItem from="1572023575713" duration="326000" />
+      <workItem from="1572034055176" duration="33000" />
+      <workItem from="1572070025854" duration="206000" />
+      <workItem from="1572081577378" duration="1700000" />
+      <workItem from="1572266956123" duration="4883000" />
+      <workItem from="1572295343164" duration="7667000" />
+      <workItem from="1572325846735" duration="1273000" />
+      <workItem from="1572347946889" duration="135000" />
+      <workItem from="1572351539648" duration="7420000" />
+      <workItem from="1572375120716" duration="2427000" />
+      <workItem from="1572377610277" duration="149000" />
+      <workItem from="1572467226906" duration="246000" />
+      <workItem from="1572518244064" duration="273000" />
+      <workItem from="1572546611574" duration="13000" />
+      <workItem from="1572547168994" duration="193000" />
+      <workItem from="1572550193426" duration="56000" />
+      <workItem from="1572678827376" duration="35000" />
+      <workItem from="1573133100055" duration="1899000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/game/slindingblocks/Starter.java</url>
+          <line>26</line>
+          <option name="timeStamp" value="19" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="simpleUML.UMLToolWindowPlugin">
+    <General>
+      <option name="birdViewUpdateDelay" value="2000" />
+      <option name="defaultFileLocation" value="file://$PROJECT_DIR$/.." />
+    </General>
+    <Classdiagram>
+      <option name="diagramTitleFont" value="SansSerif,1,12" />
+      <option name="diagramFont" value="SansSerif,0,10" />
+      <option name="defaultFieldsExpanded" value="false" />
+      <option name="defaultContructorsExpanded" value="false" />
+      <option name="defaultMethodsExpanded" value="false" />
+      <option name="showParameters" value="true" />
+      <option name="showTooltip" value="true" />
+      <option name="showReturnValues" value="true" />
+      <option name="longModifier" value="true" />
+      <option name="implementsBehaviour" value="1" />
+      <option name="extendsBehaviour" value="1" />
+      <option name="compartmentBehaviour" value="1" />
+      <option name="interfaceBackgroundColor" value="-6494306" />
+      <option name="abstractClassBackgroundColor" value="-1580132" />
+      <option name="classBackgroundColor" value="-6508057" />
+      <option name="diagramBackgroundColor" value="-1" />
+      <option name="useAntialiasedConnectors" value="true" />
+      <option name="quickSourceLinkColor" value="-16776961" />
+      <option name="quickDiagramLinkColor" value="-8454144" />
+      <option name="drawDecorations" value="false" />
+      <option name="hideFieldList" value="" />
+      <option name="showFieldList" value="" />
+      <option name="hideConstructorList" value="" />
+      <option name="showConstructorList" value="" />
+      <option name="hideMethodList" value="" />
+      <option name="showMethodList" value="" />
+      <option name="minimumFigureSize" value="0,0" />
+    </Classdiagram>
+    <Dependencydiagram>
+      <option name="diagramTitleFont" value="SansSerif,1,12" />
+      <option name="diagramFont" value="SansSerif,0,10" />
+      <option name="diagramBackgroundColor" value="-1" />
+      <option name="useAntialiasedConnectors" value="true" />
+      <option name="packageNameCompressionLevel" value="0" />
+    </Dependencydiagram>
+    <Packagediagram>
+      <option name="diagramTitleFont" value="SansSerif,0,12" />
+      <option name="diagramFont" value="SansSerif,0,10" />
+      <option name="packageBackgroundColor" value="-4144960" />
+      <option name="diagramBackgroundColor" value="-1" />
+      <option name="useAntialiasedConnectors" value="true" />
+      <option name="packageNameCompressionLevel" value="2" />
+    </Packagediagram>
+  </component>
+</project>

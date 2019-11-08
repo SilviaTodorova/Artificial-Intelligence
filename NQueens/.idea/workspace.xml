@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="99492fa0-4cb2-4f60-b532-f6706bd8f5af" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../TravellingSalesman - Copy/src/bg/sofia/uni/fmi/mjt/enums/CrossoverType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TravellingSalesman - Copy/src/bg/sofia/uni/fmi/mjt/enums/MutationType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TravellingSalesman/src/bg/sofia/uni/fmi/mjt/Chromosome.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TravellingSalesman/src/bg/sofia/uni/fmi/mjt/City.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TravellingSalesman/src/bg/sofia/uni/fmi/mjt/Crossover.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TravellingSalesman/src/bg/sofia/uni/fmi/mjt/DataSet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TravellingSalesman/src/bg/sofia/uni/fmi/mjt/GeneticAlgorithm.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TravellingSalesman/src/bg/sofia/uni/fmi/mjt/Import.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TravellingSalesman/src/bg/sofia/uni/fmi/mjt/Mutation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TravellingSalesman/src/bg/sofia/uni/fmi/mjt/Population.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TravellingSalesman/src/bg/sofia/uni/fmi/mjt/Preset.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TravellingSalesman/src/bg/sofia/uni/fmi/mjt/Selection.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/NQueens/com/nqueens/problem/MinConflictAlgorithm.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/NQueens/com/nqueens/problem/MinConflictAlgorithm.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/nqueens/problem/MinConflictAlgorithm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/nqueens/problem/MinConflictAlgorithm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SlidingBlocks/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../SlidingBlocks/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SlidingBlocks/npuzzle inputs.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SlidingBlocks/out/production/SlidingBlocks/SlidingBlockGame.class" beforeDir="false" afterPath="$PROJECT_DIR$/../SlidingBlocks/out/production/SlidingBlocks/SlidingBlockGame.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SlidingBlocks/out/production/SlidingBlocks/com/game/slindingblocks/IDAStarAlgorithm.class" beforeDir="false" afterPath="$PROJECT_DIR$/../SlidingBlocks/out/production/SlidingBlocks/com/game/slindingblocks/IDAStarAlgorithm.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SlidingBlocks/out/production/SlidingBlocks/com/game/slindingblocks/Node.class" beforeDir="false" afterPath="$PROJECT_DIR$/../SlidingBlocks/out/production/SlidingBlocks/com/game/slindingblocks/Node.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SlidingBlocks/src/SlidingBlockGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/../SlidingBlocks/src/SlidingBlockGame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SlidingBlocks/src/com/game/slindingblocks/IDAStarAlgorithm.java" beforeDir="false" afterPath="$PROJECT_DIR$/../SlidingBlocks/src/com/game/slindingblocks/IDAStarAlgorithm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SlidingBlocks/src/com/game/slindingblocks/Node.java" beforeDir="false" afterPath="$PROJECT_DIR$/../SlidingBlocks/src/com/game/slindingblocks/Node.java" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="1Suj5xjLh00vSP0wCzQ4dfbVV0g" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1572445748179" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Application.Main">
+    <configuration name="Main (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="archive.second.Main" />
+      <module name="NQueens" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="archive.second.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="com.nqueens.problem.NQueens" />
+      <module name="NQueens" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="NQueens1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="archive.first.NQueens1" />
+      <module name="NQueens" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="archive.first.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Starter" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="tets.Starter" />
+      <module name="NQueens" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tets.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.Main" />
+      <item itemvalue="Application.Starter" />
+      <item itemvalue="Application.NQueens1" />
+      <item itemvalue="Application.Main (1)" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+        <item itemvalue="Application.Main (1)" />
+        <item itemvalue="Application.NQueens1" />
+        <item itemvalue="Application.Starter" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="99492fa0-4cb2-4f60-b532-f6706bd8f5af" name="Default Changelist" comment="" />
+      <created>1571842532683</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1571842532683</updated>
+      <workItem from="1571842538232" duration="1701000" />
+      <workItem from="1571858736855" duration="11000" />
+      <workItem from="1571858784832" duration="27000" />
+      <workItem from="1571941065199" duration="2814000" />
+      <workItem from="1572023995348" duration="9420000" />
+      <workItem from="1572081564030" duration="234000" />
+      <workItem from="1572377764657" duration="1887000" />
+      <workItem from="1572420201400" duration="1534000" />
+      <workItem from="1572422261546" duration="371000" />
+      <workItem from="1572429495395" duration="1649000" />
+      <workItem from="1572434572519" duration="1514000" />
+      <workItem from="1572437732180" duration="61000" />
+      <workItem from="1572445203970" duration="536000" />
+      <workItem from="1572446136331" duration="7006000" />
+      <workItem from="1572454113309" duration="33000" />
+      <workItem from="1572454264147" duration="10000" />
+      <workItem from="1572467209725" duration="1259000" />
+      <workItem from="1572546644404" duration="519000" />
+      <workItem from="1573133088160" duration="3231000" />
+      <workItem from="1573137617026" duration="224000" />
+      <workItem from="1573220225374" duration="1250000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/archive/second/NQueens2.java</url>
+          <line>28</line>
+          <option name="timeStamp" value="28" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/nqueens/problem/NQueens.java</url>
+          <line>8</line>
+          <option name="timeStamp" value="34" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/nqueens/problem/MinConflictAlgorithm.java</url>
+          <line>156</line>
+          <option name="timeStamp" value="35" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="simpleUML.UMLToolWindowPlugin">
+    <General>
+      <option name="birdViewUpdateDelay" value="2000" />
+      <option name="defaultFileLocation" value="file://$PROJECT_DIR$/.." />
+    </General>
+    <Classdiagram>
+      <option name="diagramTitleFont" value="SansSerif,1,12" />
+      <option name="diagramFont" value="SansSerif,0,10" />
+      <option name="defaultFieldsExpanded" value="false" />
+      <option name="defaultContructorsExpanded" value="false" />
+      <option name="defaultMethodsExpanded" value="false" />
+      <option name="showParameters" value="true" />
+      <option name="showTooltip" value="true" />
+      <option name="showReturnValues" value="true" />
+      <option name="longModifier" value="true" />
+      <option name="implementsBehaviour" value="1" />
+      <option name="extendsBehaviour" value="1" />
+      <option name="compartmentBehaviour" value="1" />
+      <option name="interfaceBackgroundColor" value="-6494306" />
+      <option name="abstractClassBackgroundColor" value="-1580132" />
+      <option name="classBackgroundColor" value="-6508057" />
+      <option name="diagramBackgroundColor" value="-1" />
+      <option name="useAntialiasedConnectors" value="true" />
+      <option name="quickSourceLinkColor" value="-16776961" />
+      <option name="quickDiagramLinkColor" value="-8454144" />
+      <option name="drawDecorations" value="false" />
+      <option name="hideFieldList" value="" />
+      <option name="showFieldList" value="" />
+      <option name="hideConstructorList" value="" />
+      <option name="showConstructorList" value="" />
+      <option name="hideMethodList" value="" />
+      <option name="showMethodList" value="" />
+      <option name="minimumFigureSize" value="0,0" />
+    </Classdiagram>
+    <Dependencydiagram>
+      <option name="diagramTitleFont" value="SansSerif,1,12" />
+      <option name="diagramFont" value="SansSerif,0,10" />
+      <option name="diagramBackgroundColor" value="-1" />
+      <option name="useAntialiasedConnectors" value="true" />
+      <option name="packageNameCompressionLevel" value="0" />
+    </Dependencydiagram>
+    <Packagediagram>
+      <option name="diagramTitleFont" value="SansSerif,0,12" />
+      <option name="diagramFont" value="SansSerif,0,10" />
+      <option name="packageBackgroundColor" value="-4144960" />
+      <option name="diagramBackgroundColor" value="-1" />
+      <option name="useAntialiasedConnectors" value="true" />
+      <option name="packageNameCompressionLevel" value="2" />
+    </Packagediagram>
+  </component>
+</project>
