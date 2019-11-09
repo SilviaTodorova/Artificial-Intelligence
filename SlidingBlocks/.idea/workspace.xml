@@ -2,23 +2,26 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cea2dc52-d179-4aec-aa2d-78a5c37d94e2" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../TSP/src/bg/sofia/uni/fmi/mjt/City.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TSP/src/bg/sofia/uni/fmi/mjt/GeneticAlgorithm.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TSP/src/bg/sofia/uni/fmi/mjt/Individual.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TSP/src/bg/sofia/uni/fmi/mjt/Population.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TSP/src/bg/sofia/uni/fmi/mjt/Route.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TSP/src/bg/sofia/uni/fmi/mjt/TSP.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../NQueens/.idea/checkstyle-idea.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../NQueens/.idea/qaplug_profiles.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/checkstyle-idea.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/qaplug_profiles.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TravellingSalesman/.idea/checkstyle-idea.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TravellingSalesman/.idea/qaplug_profiles.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NQueens/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../NQueens/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../NQueens/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../NQueens/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NQueens/out/production/NQueens/com/nqueens/problem/MinConflictAlgorithm.class" beforeDir="false" afterPath="$PROJECT_DIR$/../NQueens/out/production/NQueens/com/nqueens/problem/MinConflictAlgorithm.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NQueens/src/com/nqueens/problem/MinConflictAlgorithm.java" beforeDir="false" afterPath="$PROJECT_DIR$/../NQueens/src/com/nqueens/problem/MinConflictAlgorithm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/npuzzle inputs.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SlidingBlocks/SlidingBlockGame.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SlidingBlocks/SlidingBlockGame.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SlidingBlocks/com/game/slindingblocks/IDAStarAlgorithm.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SlidingBlocks/com/game/slindingblocks/IDAStarAlgorithm.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SlidingBlocks/com/game/slindingblocks/Node.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SlidingBlocks/com/game/slindingblocks/Node.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SlidingBlockGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SlidingBlockGame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/game/slindingblocks/IDAStarAlgorithm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/game/slindingblocks/IDAStarAlgorithm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/game/slindingblocks/Node.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/game/slindingblocks/Node.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TravellingSalesman/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../TravellingSalesman/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TravellingSalesman/out/production/TravellingSalesman/bg/sofia/uni/fmi/mjt/algorithm/GeneticAlgorithm.class" beforeDir="false" afterPath="$PROJECT_DIR$/../TravellingSalesman/out/production/TravellingSalesman/bg/sofia/uni/fmi/mjt/algorithm/GeneticAlgorithm.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TravellingSalesman/out/production/TravellingSalesman/bg/sofia/uni/fmi/mjt/algorithm/Population.class" beforeDir="false" afterPath="$PROJECT_DIR$/../TravellingSalesman/out/production/TravellingSalesman/bg/sofia/uni/fmi/mjt/algorithm/Population.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TravellingSalesman/src/bg/sofia/uni/fmi/mjt/algorithm/Chromosome.java" beforeDir="false" afterPath="$PROJECT_DIR$/../TravellingSalesman/src/bg/sofia/uni/fmi/mjt/models/Chromosome.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TravellingSalesman/src/bg/sofia/uni/fmi/mjt/algorithm/City.java" beforeDir="false" afterPath="$PROJECT_DIR$/../TravellingSalesman/src/bg/sofia/uni/fmi/mjt/models/City.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TravellingSalesman/src/bg/sofia/uni/fmi/mjt/algorithm/Crossover.java" beforeDir="false" afterPath="$PROJECT_DIR$/../TravellingSalesman/src/bg/sofia/uni/fmi/mjt/elements/Crossover.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TravellingSalesman/src/bg/sofia/uni/fmi/mjt/algorithm/GeneticAlgorithm.java" beforeDir="false" afterPath="$PROJECT_DIR$/../TravellingSalesman/src/bg/sofia/uni/fmi/mjt/algorithm/GeneticAlgorithm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TravellingSalesman/src/bg/sofia/uni/fmi/mjt/algorithm/Mutation.java" beforeDir="false" afterPath="$PROJECT_DIR$/../TravellingSalesman/src/bg/sofia/uni/fmi/mjt/elements/Mutation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TravellingSalesman/src/bg/sofia/uni/fmi/mjt/algorithm/Population.java" beforeDir="false" afterPath="$PROJECT_DIR$/../TravellingSalesman/src/bg/sofia/uni/fmi/mjt/algorithm/Population.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TravellingSalesman/src/bg/sofia/uni/fmi/mjt/algorithm/Selection.java" beforeDir="false" afterPath="$PROJECT_DIR$/../TravellingSalesman/src/bg/sofia/uni/fmi/mjt/elements/Selection.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -40,10 +43,11 @@
   <component name="ProjectId" id="1SsJsatczbQoBxSa6PCauimVhxa" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1572377545010" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../NQueens" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -118,6 +122,7 @@
       <workItem from="1572550193426" duration="56000" />
       <workItem from="1572678827376" duration="35000" />
       <workItem from="1573133100055" duration="1899000" />
+      <workItem from="1573292974242" duration="659000" />
     </task>
     <servers />
   </component>

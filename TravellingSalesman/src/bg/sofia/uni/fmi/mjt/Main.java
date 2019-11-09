@@ -1,20 +1,21 @@
 package bg.sofia.uni.fmi.mjt;
 
-import bg.sofia.uni.fmi.mjt.algorithm.GeneticAlgorithm;
+import bg.sofia.uni.fmi.mjt.enums.CrossoverType;
+import bg.sofia.uni.fmi.mjt.enums.MutationType;
 
 import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
         int numberOfcities = getNumberOfCities();
-        GeneticAlgorithm geneticAlgorithm = new GeneticAlgorithm(numberOfcities);
+        GeneticAlgorithm geneticAlgorithm = new GeneticAlgorithm(numberOfcities, CrossoverType.ONE_POINT, MutationType.SWAP);
 
         geneticAlgorithm.run();
         geneticAlgorithm.printProperties();
         geneticAlgorithm.printResults();
     }
 
-    public static int getNumberOfCities(){
+    private static int getNumberOfCities() {
         Scanner in = new Scanner(System.in);
 
         System.out.print("Enter positive number of cities: ");
@@ -25,6 +26,6 @@ public class Main {
         }
 
         in.close();
-        return  numberOfCities;
+        return numberOfCities;
     }
 }

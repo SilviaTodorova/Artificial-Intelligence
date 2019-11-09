@@ -1,12 +1,9 @@
-package bg.sofia.uni.fmi.mjt.algorithm;
-
-import bg.sofia.uni.fmi.mjt.algorithm.Chromosome;
-import bg.sofia.uni.fmi.mjt.algorithm.City;
+package bg.sofia.uni.fmi.mjt;
 
 import java.util.*;
 
-public class Crossover {
-    static ArrayList<Chromosome> onePointCrossover (Chromosome p1, Chromosome p2, Random r) {
+class Crossover {
+    public static List<Chromosome> onePointCrossover(Chromosome p1, Chromosome p2) {
         City[] parent1 = p1.getArray();
         City[] parent2 = p2.getArray();
 
@@ -22,6 +19,7 @@ public class Crossover {
         ArrayList<Chromosome> children = new ArrayList<>();
         int totalCities = parent1.length;
 
+        Random r = new Random();
         int randomPoint = r.nextInt(totalCities);
 
         // Inherit the cities up to the point.
@@ -82,7 +80,7 @@ public class Crossover {
         return children;
     }
 
-    static ArrayList<Chromosome> twoPointCrossover (Chromosome p1, Chromosome p2, Random r) {
+    public static List<Chromosome> twoPointCrossover(Chromosome p1, Chromosome p2) {
         City[] parent1 = p1.getArray();
         City[] parent2 = p2.getArray();
 
@@ -98,6 +96,7 @@ public class Crossover {
         ArrayList<Chromosome> children = new ArrayList<>();
         int totalCities = parent1.length;
 
+        Random r = new Random();
         int firstPoint = r.nextInt(totalCities);
         int secondPoint = r.nextInt(totalCities - firstPoint) + firstPoint;
 
