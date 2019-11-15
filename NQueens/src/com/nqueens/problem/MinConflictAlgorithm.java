@@ -59,7 +59,7 @@ public class MinConflictAlgorithm {
     public void printSolution() {
         for (int row = 0; row < this.numberOfQueens; row++) {
             for (int col = 0; col < this.numberOfQueens; col++) {
-                char sign = queens[col] == row ? '*' : '_';
+                char sign = queens[col] == row ? 'X' : '0';
                 System.out.print(String.format("%c ", sign));
             }
             System.out.println();

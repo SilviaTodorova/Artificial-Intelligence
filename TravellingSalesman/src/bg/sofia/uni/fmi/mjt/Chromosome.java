@@ -29,21 +29,7 @@ public class Chromosome implements Comparable<Chromosome> {
         return cities.clone();
     }
 
-    @Override
-    public int compareTo(Chromosome chromosome) {
-        return getDistance() - chromosome.getDistance();
-    }
-
-    @Override
-    public int hashCode() {
-        StringBuilder sb = new StringBuilder();
-        for (City city : cities) {
-            sb.append(city);
-        }
-        return (new String(sb)).hashCode();
-    }
-
-    public int getDistance() {
+    public int getFitness() {
         if (fitness != -1) {
             return fitness;
         }
@@ -57,6 +43,20 @@ public class Chromosome implements Comparable<Chromosome> {
         distanceTravelled += City.distance(cities[cities.length - 1], cities[0]);
         this.fitness = (int) distanceTravelled;
         return fitness;
+    }
+
+    @Override
+    public int compareTo(Chromosome chromosome) {
+        return getFitness() - chromosome.getFitness();
+    }
+
+    @Override
+    public int hashCode() {
+        StringBuilder sb = new StringBuilder();
+        for (City city : cities) {
+            sb.append(city);
+        }
+        return (new String(sb)).hashCode();
     }
 
     @Override

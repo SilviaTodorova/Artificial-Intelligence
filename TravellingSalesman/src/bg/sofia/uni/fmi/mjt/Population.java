@@ -1,12 +1,9 @@
 package bg.sofia.uni.fmi.mjt;
 
-import java.nio.BufferOverflowException;
-import java.util.Iterator;
 import java.util.PriorityQueue;
 import java.util.Random;
 
-public class Population implements Iterable<Chromosome> {
-
+public class Population {
     private PriorityQueue<Chromosome> chromosomes;
     private int maxSize;
 
@@ -17,8 +14,9 @@ public class Population implements Iterable<Chromosome> {
 
     public void add(Chromosome chromosome) {
         if (chromosomes.size() == maxSize) {
-            throw new BufferOverflowException();
+            throw new NullPointerException();
         }
+
         chromosomes.add(chromosome);
     }
 
@@ -61,28 +59,10 @@ public class Population implements Iterable<Chromosome> {
         return chromosomes.peek();
     }
 
-    public Iterator<Chromosome> iterator() {
-        return chromosomes.iterator();
-    }
-
     public Population deepCopy() {
         Population population = new Population(maxSize);
         chromosomes.forEach(population::add);
         return population;
-    }
-
-    @Override
-    public String toString() {
-        StringBuilder sb = new StringBuilder("Population:");
-
-        for (Chromosome chromosome : chromosomes) {
-            sb.append("\n");
-            sb.append(chromosome);
-            sb.append(" Value: ");
-            sb.append(chromosome.getDistance());
-        }
-
-        return new String(sb);
     }
 
 }

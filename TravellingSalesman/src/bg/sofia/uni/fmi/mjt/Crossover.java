@@ -13,16 +13,15 @@ class Crossover {
         HashSet<City> citiesInChild1 = new HashSet<>();
         HashSet<City> citiesInChild2 = new HashSet<>();
 
-        ArrayList<City> citiesNotInChild1 = new ArrayList<>();
-        ArrayList<City> citiesNotInChild2 = new ArrayList<>();
+        List<City> citiesNotInChild1 = new ArrayList<>();
+        List<City> citiesNotInChild2 = new ArrayList<>();
 
-        ArrayList<Chromosome> children = new ArrayList<>();
+        List<Chromosome> children = new ArrayList<>();
         int totalCities = parent1.length;
 
         Random r = new Random();
         int randomPoint = r.nextInt(totalCities);
 
-        // Inherit the cities up to the point.
         for (int i = 0; i < randomPoint; i++) {
             child1[i] = parent1[i];
             child2[i] = parent2[i];
@@ -30,7 +29,6 @@ class Crossover {
             citiesInChild2.add(parent2[i]);
         }
 
-        // Get the cities of the opposite parent if the child does not already contain them.
         for (int i = randomPoint; i < totalCities; i++) {
             if (!citiesInChild1.contains(parent2[i])) {
                 citiesInChild1.add(parent2[i]);
@@ -42,7 +40,6 @@ class Crossover {
             }
         }
 
-        // Find all the cities that are still missing from each child.
         for (int i = 0; i < totalCities; i++) {
             if (!citiesInChild1.contains(parent2[i])) {
                 citiesNotInChild1.add(parent2[i]);
@@ -52,9 +49,8 @@ class Crossover {
             }
         }
 
-        // Find which spots are still empty in each child.
-        ArrayList<Integer> emptySpotsC1 = new ArrayList<>();
-        ArrayList<Integer> emptySpotsC2 = new ArrayList<>();
+        List<Integer> emptySpotsC1 = new ArrayList<>();
+        List<Integer> emptySpotsC2 = new ArrayList<>();
         for (int i = 0; i < totalCities; i++) {
             if (child1[i] == null) {
                 emptySpotsC1.add(i);
@@ -64,7 +60,6 @@ class Crossover {
             }
         }
 
-        // Fill in the empty spots.
         for (City city : citiesNotInChild1) {
             child1[emptySpotsC1.remove(0)] = city;
         }
@@ -100,7 +95,6 @@ class Crossover {
         int firstPoint = r.nextInt(totalCities);
         int secondPoint = r.nextInt(totalCities - firstPoint) + firstPoint;
 
-        // Inherit the cities before and after the points selected.
         for (int i = 0; i < firstPoint; i++) {
             child1[i] = parent1[i];
             child2[i] = parent2[i];
@@ -114,7 +108,6 @@ class Crossover {
             citiesInChild2.add(parent2[i]);
         }
 
-        // Get the cities of the opposite parent if the child does not already contain them.
         for (int i = firstPoint; i < secondPoint; i++) {
             if (!citiesInChild1.contains(parent2[i])) {
                 citiesInChild1.add(parent2[i]);
@@ -126,7 +119,6 @@ class Crossover {
             }
         }
 
-        // Find all the cities that are still missing from each child.
         for (int i = 0; i < totalCities; i++) {
             if (!citiesInChild1.contains(parent2[i])) {
                 citiesNotInChild1.add(parent2[i]);
@@ -136,7 +128,6 @@ class Crossover {
             }
         }
 
-        // Find which spots are still empty in each child.
         ArrayList<Integer> emptySpotsC1 = new ArrayList<>();
         ArrayList<Integer> emptySpotsC2 = new ArrayList<>();
         for (int i = 0; i < totalCities; i++) {
@@ -148,7 +139,6 @@ class Crossover {
             }
         }
 
-        // Fill in the empty spots.
         for (City city : citiesNotInChild1) {
             child1[emptySpotsC1.remove(0)] = city;
         }

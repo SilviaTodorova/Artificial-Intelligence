@@ -50,7 +50,7 @@ class Selection {
         for (Chromosome c : arrayList) {
             if (bestC == null) {
                 bestC = c;
-            } else if (c.getDistance() < bestC.getDistance()) {
+            } else if (c.getFitness() < bestC.getFitness()) {
                 bestC = c;
             }
         }

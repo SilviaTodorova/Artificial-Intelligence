@@ -8,7 +8,7 @@ import java.util.*;
 class GeneticAlgorithm {
     private static final int POPULATION_SIZE = 100;
     private static final int MAX_GENERATIONS = 2000;
-    private static final int COUNT_SELECT = 100;
+    private static final int COUNT_SELECT = 3;
 
     private Population population;
     private Population initialPop;
@@ -18,7 +18,6 @@ class GeneticAlgorithm {
     private CrossoverType crossoverType;
     private MutationType mutationType;
 
-    private int countSelect;
     private double mutationRate;
 
     private List<Integer> distanceGenerations;
@@ -28,7 +27,6 @@ class GeneticAlgorithm {
         initialPop = Population.getRandomPopulation(numberOfCities, POPULATION_SIZE);
 
         this.setPopulation(initialPop);
-        this.setCountSelect(COUNT_SELECT);
         this.setMutationRate(0.04);
 
         this.setCrossoverType(crossoverType);
@@ -37,91 +35,11 @@ class GeneticAlgorithm {
         distanceGenerations = new ArrayList<>();
     }
 
-    private void setPopulation(Population population) {
-        if (population == null) {
-            throw new IllegalArgumentException();
-        }
-
-        initialPop = population;
-        this.population = initialPop.deepCopy();
-    }
-
-    private void setCountSelect(int countSelect) {
-        if (countSelect < 0) {
-            throw new IllegalArgumentException();
-        }
-        this.countSelect = countSelect;
-    }
-
-    private void setMutationRate(double mutationRate) {
-        if (mutationRate < 0 || mutationRate > 1) {
-            throw new IllegalArgumentException();
-        }
-        this.mutationRate = mutationRate;
-    }
-
-    private void setCrossoverType(CrossoverType crossoverType) {
-        this.crossoverType = crossoverType;
-    }
-
-    private void setMutationType(MutationType mutationType) {
-        this.mutationType = mutationType;
-    }
-
     public void run() {
         for (int i = 0; i < MAX_GENERATIONS; i++) {
             population = createNextGeneration();
-            distanceGenerations.add(population.getMostFit().getDistance());
+            distanceGenerations.add(population.getMostFit().getFitness());
         }
-    }
-
-    private Population createNextGeneration() {
-        Population nextGen = new Population(population.size());
-
-        Random r = new Random();
-        while (nextGen.size() < population.size() - 1) {
-            Chromosome p1 = Selection.tournamentSelection(population, countSelect);
-            Chromosome p2 = Selection.tournamentSelection(population, countSelect);
-
-            List<Chromosome> children = crossover(p1, p2);
-            p1 = children.get(0);
-            p2 = children.get(1);
-
-            if (r.nextDouble() <= mutationRate) {
-                p1 = mutate(p1);
-            }
-
-            if (r.nextDouble() <= mutationRate) {
-                p2 = mutate(p2);
-            }
-
-            nextGen.add(p1);
-            nextGen.add(p2);
-        }
-
-        if (nextGen.size() != POPULATION_SIZE) {
-            nextGen.add(Selection.tournamentSelection(population, countSelect));
-        }
-
-        return nextGen;
-    }
-
-    private Chromosome mutate(Chromosome chromosome) {
-        if (mutationType == MutationType.SWAP) {
-            return Mutation.swap(chromosome);
-        } else {
-            return Mutation.insertion(chromosome);
-        }
-    }
-
-    private List<Chromosome> crossover(Chromosome p1, Chromosome p2) {
-        List<Chromosome> children;
-        if (crossoverType == CrossoverType.ONE_POINT) {
-            children = Crossover.onePointCrossover(p1, p2);
-        } else {
-            children = Crossover.twoPointCrossover(p1, p2);
-        }
-        return children;
     }
 
     public void printProperties() {
@@ -149,4 +67,76 @@ class GeneticAlgorithm {
         }
     }
 
+    private void setPopulation(Population population) {
+        if (population == null) {
+            throw new IllegalArgumentException();
+        }
+
+        initialPop = population;
+        this.population = initialPop.deepCopy();
+    }
+
+    private void setMutationRate(double mutationRate) {
+        if (mutationRate < 0 || mutationRate > 1) {
+            throw new IllegalArgumentException();
+        }
+        this.mutationRate = mutationRate;
+    }
+
+    private void setCrossoverType(CrossoverType crossoverType) {
+        this.crossoverType = crossoverType;
+    }
+
+    private void setMutationType(MutationType mutationType) {
+        this.mutationType = mutationType;
+    }
+
+    private Population createNextGeneration() {
+        Population nextGen = new Population(population.size());
+
+        Random r = new Random();
+        while (nextGen.size() < population.size() - 1) {
+            Chromosome p1 = Selection.tournamentSelection(population, COUNT_SELECT);
+            Chromosome p2 = Selection.tournamentSelection(population, COUNT_SELECT);
+
+            List<Chromosome> children = crossover(p1, p2);
+            p1 = children.get(0);
+            p2 = children.get(1);
+
+            if (r.nextDouble() <= mutationRate) {
+                p1 = mutate(p1);
+            }
+
+            if (r.nextDouble() <= mutationRate) {
+                p2 = mutate(p2);
+            }
+
+            nextGen.add(p1);
+            nextGen.add(p2);
+        }
+
+        if (nextGen.size() != POPULATION_SIZE) {
+            nextGen.add(Selection.tournamentSelection(population, COUNT_SELECT));
+        }
+
+        return nextGen;
+    }
+
+    private Chromosome mutate(Chromosome chromosome) {
+        if (mutationType == MutationType.SWAP) {
+            return Mutation.swap(chromosome);
+        } else {
+            return Mutation.insertion(chromosome);
+        }
+    }
+
+    private List<Chromosome> crossover(Chromosome p1, Chromosome p2) {
+        List<Chromosome> children;
+        if (crossoverType == CrossoverType.ONE_POINT) {
+            children = Crossover.onePointCrossover(p1, p2);
+        } else {
+            children = Crossover.twoPointCrossover(p1, p2);
+        }
+        return children;
+    }
 }
