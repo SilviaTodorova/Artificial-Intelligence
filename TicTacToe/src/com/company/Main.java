@@ -6,7 +6,7 @@ public class Main {
 
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
-        System.out.printf(String.format("Choose which player is first: %n(1) You%n(2) Computer%n%nPlease, enter option: "));
+        System.out.print(String.format("Choose which player is first: %n(1) You%n(2) Computer%n%nPlease, enter option: "));
 
         int turn = in.nextInt();
 
@@ -20,11 +20,11 @@ public class Main {
         Player winner = game.play(player, in);
 
         if(winner.equals(Player.COMPUTER)){
-            System.out.printf(String.format("%nGAME OVER!%n"));
+            System.out.print(String.format("%nGAME OVER!%n"));
         }else if(winner.equals(Player.YOU)){
-            System.out.printf(String.format("%nCONGRATULATIONS, YOU WON!%n"));
+            System.out.print(String.format("%nCONGRATULATIONS, YOU WON!%n"));
         }else{
-            System.out.printf(String.format("%nTHERE AREN'T WINNER!%n"));
+            System.out.print(String.format("%nTHERE AREN'T WINNER!%n"));
         }
 
     }

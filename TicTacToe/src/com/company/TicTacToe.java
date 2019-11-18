@@ -1,54 +1,52 @@
 package com.company;
 
+import java.util.Random;
 import java.util.Scanner;
 
-public class TicTacToe {
-    private Board board;
-    private MinMaxAlgorithm minMaxAlgorithm;
+class TicTacToe {
+    private final Board board = new Board();
+    private final MinMaxAlgorithm algorithm = new MinMaxAlgorithm();
 
     public Player play(Player turn, Scanner in) {
-        this.board = new Board(turn);
-        minMaxAlgorithm = new MinMaxAlgorithm();
+        board.setPlayersTurn(Player.YOU);
 
-        do {
+        Random random = new Random();
+        if(turn.equals(Player.COMPUTER)){
+            board.setPlayersTurn(Player.COMPUTER);
+            board.makeMove(random.nextInt(3), random.nextInt(3));
+        }
+
+        do{
             board.displayBoard();
-            this.nextStep(in);
-        } while (!board.isGameOver());
+
+            this.nextStep(in, board, Player.YOU);
+            board.displayBoard();
+
+            this.nextStep(in, board, Player.COMPUTER);
+        }while(!board.isGameOver());
 
         board.displayBoard();
 
         return board.getWinner();
     }
 
-    private void nextStep(Scanner in) {
-        if(board.isGameOver()){
-            return;
-        }
-
-        Player turn = this.board.getTurn();
-
-        if (turn.equals(Player.YOU)) {
-            System.out.printf("%nIt's your turn X:%n");
-            this.getPlayerStep(Player.YOU, in);
-        } else {
-            System.out.printf("%nIt's computer turn 0:%n");
-            minMaxAlgorithm.alphaBetaDecision(Player.COMPUTER, board);
-            //this.getPlayerStep(Player.COMPUTER, in);
-        }
-
-        Player winner = board.checkWinner();
-        if (!board.isGameOver()) {
-            board.setWinner(winner);
+    private void nextStep(Scanner in, Board board, Player turn) {
+        if(turn.equals(Player.YOU)){
+            System.out.printf("It's your turn X:%n");
+            this.getPlayerStep(in, board);
+        }else{
+            System.out.printf("It's computer turn 0:%n");
+            algorithm.start(board, board.getPlayersTurn(), 0);
         }
     }
 
-    private void getPlayerStep(Player player, Scanner in) {
+    private void getPlayerStep(Scanner in, Board board) {
         boolean correctInput = false;
         do {
             System.out.print("row = ");
             int x = in.nextInt() - 1;
             while (x < 0 || x > 2) {
-                System.out.println("Incorrect option! Please row index between 1 and 3: ");
+                System.out.printf("%nIncorrect option! Please row index between 1 and 3:%n");
                 System.out.print("row = ");
                 x = in.nextInt() - 1;
             }
@@ -56,16 +54,15 @@ public class TicTacToe {
             System.out.print("column = ");
             int y = in.nextInt() - 1;
             while (y < 0 || y > 2) {
-                System.out.println("Incorrect option! Please choose column between 1 and 3: ");
+                System.out.printf("%nIncorrect option! Please choose column between 1 and 3:%n");
                 System.out.print("column = ");
                 y = in.nextInt() - 1;
             }
 
-            Point point = new Point(x, y);
-            correctInput = board.move(player, point);
+            correctInput = board.makeMove(x,y);
 
             if (!correctInput) {
-                System.out.printf("Incorrect input!%n");
+                System.out.printf("%nIncorrect input!%n");
             }
 
         } while (!correctInput);

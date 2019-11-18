@@ -1,86 +1,87 @@
 package com.company;
 
+class MinMaxAlgorithm {
+    private final int NEGATIVE_INFINITY;
+    private final int POSITIVE_INFINITY;
+    private final int currentDepth;
 
-public class MinMaxAlgorithm {
-    private static final int MAX_DEPTH = 10;
-
-    void alphaBetaDecision(Player player, Board board) {
-        alphaBetaDecision(player, board, Integer.MIN_VALUE, Integer.MAX_VALUE, 0);
+    public MinMaxAlgorithm() {
+        NEGATIVE_INFINITY = Integer.MIN_VALUE;
+        POSITIVE_INFINITY = Integer.MAX_VALUE;
+        currentDepth = 0;
     }
 
-    private int alphaBetaDecision(Player player, Board board, int alpha, int beta, int depth) {
-        if (depth++ == MAX_DEPTH || board.isGameOver()) {
-            return score(player, board, depth);
+    public int start(Board board, Player player, int currentDepth){
+        currentDepth++;
+        if(board.isGameOver()){
+            return score(board, player, currentDepth);
         }
 
-        if (board.getTurn() == player) {
-            return MAX_VALUE(player, board, alpha, beta, depth);
+        if(player == board.getPlayersTurn()){
+            return getMax(board, player, NEGATIVE_INFINITY, POSITIVE_INFINITY, currentDepth);
         } else {
-            return MIN_VALUE(player, board, alpha, beta, depth);
+            return getMin(board, player, NEGATIVE_INFINITY, POSITIVE_INFINITY, currentDepth);
         }
     }
 
-    private int MAX_VALUE(Player player, Board board, int alpha, int beta, int depth) {
-        Point bestMove = null;
+    private int getMax(Board board, Player player, int alpha, int beta, int currentDepth){
+        int indexOfBestMove = -1;
 
-        for (Point currentMove : board.getAvailableMoves()) {
-            Board modifiedBoard = board.getDeepCopy();
-            modifiedBoard.move(Player.COMPUTER, currentMove);
+        for (Integer move : board.getAvailableMoves()) {
+            Board modifiedBoard = board.copy();
+            modifiedBoard.move(move);
+            int score = start(modifiedBoard, player, currentDepth);
 
-            int score = alphaBetaDecision(player, modifiedBoard, alpha, beta, depth);
-
-            if (score > alpha) {
+            if(score > alpha){
                 alpha = score;
-                bestMove = currentMove;
+                indexOfBestMove = move;
             }
 
-            if (alpha >= beta) {
+            if(alpha >= beta){
                 break;
             }
+
         }
 
-        if (bestMove != null) {
-            board.move(Player.COMPUTER, bestMove);
+        if (indexOfBestMove != -1) {
+            board.move(indexOfBestMove);
         }
-
         return alpha;
     }
 
-    private int MIN_VALUE(Player player, Board board, int alpha, int beta, int depth) {
-        Point bestMove = null;
+    private int getMin(Board board, Player player, int alpha, int beta, int currentDepth){
+        int indexOfBestMove = -1;
 
-        for (Point move : board.getAvailableMoves()) {
-            Board modifiedBoard = board.getDeepCopy();
-            modifiedBoard.move(Player.COMPUTER, move);
+        for (Integer move : board.getAvailableMoves()) {
+            Board modifiedBoard = board.copy();
+            modifiedBoard.move(move);
+            int score = start(modifiedBoard, player, currentDepth);
 
-            int score = alphaBetaDecision(player, modifiedBoard, alpha, beta, depth);
-
-            if (score < beta) {
+            if(score < beta){
                 beta = score;
-                bestMove = move;
+                indexOfBestMove = move;
             }
 
-            if (alpha >= beta) {
+            if(alpha >= beta){
                 break;
             }
         }
 
-        if (bestMove != null) {
-            board.move(Player.COMPUTER, bestMove);
+        if (indexOfBestMove != -1) {
+            board.move(indexOfBestMove);
         }
         return beta;
     }
 
-    private int score(Player player, Board board, int depth) {
-        Player opponent = Player.COMPUTER;
+    private int score(Board board, Player player, int currentDepth){
+        Player opponent = (player == Player.YOU) ? Player.COMPUTER : Player.YOU;
 
-        if (board.isGameOver() && board.getWinner() == player) {
-            return 10 - depth;
-        } else if (board.isGameOver() && board.getWinner() == opponent) {
-            return depth - 10;
-        } else {
+        if(board.getWinner() == player){
+            return 10 - currentDepth;
+        } else if(board.getWinner() == opponent){
+            return -10 + currentDepth;
+        } else{
             return 0;
         }
     }
-
 }

@@ -3,8 +3,8 @@ package com.company;
 public enum Player {
     UNDEFINED(0,"_"),YOU(1,"X"), COMPUTER(2,"O");
 
-    private int id;
-    private String player;
+    private final int id;
+    private final String player;
 
     Player(int id, String player) {
         this.id = id;

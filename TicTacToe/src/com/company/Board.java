@@ -1,226 +1,143 @@
 package com.company;
 
-import java.util.Arrays;
 import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
 
 public class Board {
     private Player[][] board;
-    private Player turn;
+    private Player playersTurn;
     private Player winner;
-    private Set<Point> movesAvailable;
+    private int movesCount;
+    private boolean isGameOver;
+    private HashSet<Integer> movesAvailable;
 
-    public Board(Player turn) {
-        board = new Player[3][3];
-        Arrays.stream(board).forEach(elem -> Arrays.fill(elem, Player.UNDEFINED));
-
-        this.turn = turn;
-        this.winner = Player.UNDEFINED;
-
-        this.movesAvailable = new HashSet<>(9);
-        for (int row = 0; row < 3; row++) {
-            for (int col = 0; col < 3; col++) {
-                Point point = new Point(row, col);
-                movesAvailable.add(point);
-            }
-        }
+    public Board() {
+        playersTurn = Player.UNDEFINED;
+        winner = Player.UNDEFINED;
+        movesCount = 0;
+        isGameOver = false;
+        movesAvailable = new HashSet<>();
+        initializeBoard();
     }
 
-    public void displayBoard() {
-        System.out.println();
-        for (int row = 0; row < 3; row++) {
-            for (int col = 0; col < 3; col++) {
-                String player = board[row][col].getPlayer();
-                System.out.print(player + " ");
-            }
-            System.out.println();
-        }
+    public Player getPlayersTurn() {
+        return playersTurn;
     }
 
-    public Player getTurn() {
-        return this.turn;
+    public void setPlayersTurn(Player playersTurn) {
+        this.playersTurn = playersTurn;
+    }
+
+    public HashSet<Integer> getAvailableMoves() {
+        return movesAvailable;
     }
 
     public Player getWinner() {
         return winner;
     }
 
-    public void setWinner(Player winner) {
-        this.winner = winner;
-    }
+    public Board copy() {
+        Board board = new Board();
 
-    public boolean move(Player turn, Point point) {
-        int x = point.getX();
-        int y = point.getY();
-        Player step = this.board[x][y];
-
-        this.turn = (turn.equals(Player.YOU)) ? Player.COMPUTER : Player.YOU;
-
-        if (step.equals(Player.UNDEFINED)) {
-            this.board[x][y] = turn;
-            this.movesAvailable.remove(point);
-            return true;
-        } else {
-            return false;
-        }
-    }
-
-    public Player checkWinner() {
-        this.checkRows();
-        this.checkColumns();
-        this.checkMainDiagonal();
-        this.checkReversedDiagonal();
-
-        return this.winner;
-    }
-
-    public boolean isGameOver() {
-        Player player = checkWinner();
-
-        if (this.movesAvailable.size() > 0) {
-            return player.equals(Player.UNDEFINED) ? false : true;
-        } else {
-            this.winner = Player.UNDEFINED;
-            return true;
-        }
-    }
-
-    private void checkRows() {
-        int countComputer = 0;
-        int countYou = 0;
-
-        for (int row = 0; row < 3; row++) {
-            for (int col = 0; col < 3; col++) {
-                if (board[row][col].equals(Player.YOU)) {
-                    countYou++;
-                }
-
-                if (board[row][col].equals(Player.COMPUTER)) {
-                    countComputer++;
-                }
-            }
-
-            if (countYou == 3) {
-                this.winner = Player.YOU;
-                break;
-            }
-
-            if (countComputer == 3) {
-                this.winner = Player.COMPUTER;
-                break;
-            }
-
-            countComputer = 0;
-            countYou = 0;
-        }
-    }
-
-    private void checkColumns() {
-        int countComputer = 0;
-        int countYou = 0;
-
-        for (int col = 0; col < 3; col++) {
-            for (int row = 0; row < 3; row++) {
-                if (board[row][col].equals(Player.YOU)) {
-                    countYou++;
-                }
-
-                if (board[row][col].equals(Player.COMPUTER)) {
-                    countComputer++;
-                }
-            }
-
-            if (countYou == 3) {
-                this.winner = Player.YOU;
-                break;
-            }
-
-            if (countComputer == 3) {
-                this.winner = Player.COMPUTER;
-                break;
-            }
-
-            countComputer = 0;
-            countYou = 0;
-        }
-    }
-
-    private void checkMainDiagonal() {
-        int countComputer = 0;
-        int countYou = 0;
-
-        for (int col = 0; col < 3; col++) {
-            for (int row = 0; row < 3; row++) {
-                if (row == col) {
-                    if (board[row][col].equals(Player.YOU)) {
-                        countYou++;
-                    }
-
-                    if (board[row][col].equals(Player.COMPUTER)) {
-                        countComputer++;
-                    }
-                }
+        for (int i = 0; i < 3; i++) {
+            for (int j = 0; j < 3; j++) {
+                board.board[i][j] = this.board[i][j];
             }
         }
 
-        if (countYou == 3) {
-            this.winner = Player.YOU;
-            return;
-        }
-
-        if (countComputer == 3) {
-            this.winner = Player.COMPUTER;
-            return;
-        }
-
-    }
-
-    private void checkReversedDiagonal() {
-        int countComputer = 0;
-        int countYou = 0;
-
-        for (int col = 0; col < 3; col++) {
-            for (int row = 0; row < 3; row++) {
-                if ((row + col) == 2) {
-                    if (board[row][col].equals(Player.YOU)) {
-                        countYou++;
-                    }
-
-                    if (board[row][col].equals(Player.COMPUTER)) {
-                        countComputer++;
-                    }
-                }
-            }
-        }
-
-        if (countYou == 3) {
-            this.winner = Player.YOU;
-            return;
-        }
-
-        if (countComputer == 3) {
-            this.winner = Player.COMPUTER;
-            return;
-        }
-    }
-
-    public Set<Point> getAvailableMoves() {
-        return movesAvailable;
-    }
-
-    public Board getDeepCopy() {
-        Board board = new Board(Player.COMPUTER);
-
-        for (int i = 0; i < board.board.length; i++) {
-            board.board[i] = this.board[i].clone();
-        }
-
-        board.turn = this.turn;
+        board.playersTurn = this.playersTurn;
         board.winner = this.winner;
         board.movesAvailable = new HashSet<>();
         board.movesAvailable.addAll(this.movesAvailable);
-        board.winner = this.winner;
+        board.movesCount = this.movesCount;
+        board.isGameOver = this.isGameOver;
+
         return board;
     }
+
+    private void initializeBoard() {
+        board = new Player[3][3];
+
+        for (int i = 0; i < 3; ++i) {
+            for (int j = 0; j < 3; ++j) {
+                board[i][j] = Player.UNDEFINED;
+
+            }
+        }
+
+        movesAvailable.clear();
+
+        int size = 3 * 3;
+
+        for (int i = 0; i < size; i++) {
+            movesAvailable.add(i);
+        }
+    }
+
+    public boolean move(int index) {
+        return makeMove(index / 3, index % 3);
+    }
+
+    public boolean makeMove(int row, int col) {
+        if (board[row][col] != Player.UNDEFINED) {
+            // System.out.println("This place is not empty!");
+            return false;
+        }
+
+        board[row][col] = playersTurn;
+        ++movesCount;
+        movesAvailable.remove(row * 3 + col);
+
+        isGameOver = isWinner();
+
+        playersTurn = Player.YOU == playersTurn ? Player.COMPUTER : Player.YOU;
+
+        return true;
+    }
+
+    public boolean isGameOver() {
+        return isGameOver;
+    }
+
+    private boolean isWinner() {
+        for (int index = 0; index < 3; index++) {
+            //Column winner
+            if (board[0][index] == board[1][index] && board[0][index] == board[2][index] && board[0][index] != Player.UNDEFINED) {
+                winner = board[0][index];
+                return true;
+            }
+
+            //Row winner
+            if (board[index][0] == board[index][1] && board[index][0] == board[index][2] && board[index][0] != Player.UNDEFINED) {
+                winner = board[index][0];
+                return true;
+            }
+        }
+
+        //Main diagonal winner
+        if (board[0][0] == board[1][1] && board[0][0] == board[2][2] && board[0][0] != Player.UNDEFINED) {
+            winner = board[0][0];
+            return true;
+        }
+
+        // Second diagonal winner
+        if (board[0][2] == board[1][1] && board[0][2] == board[2][0] && board[0][2] != Player.UNDEFINED) {
+            winner = board[0][2];
+            return true;
+        }
+
+        // Draw or None
+        return (movesCount == 9 && winner == Player.UNDEFINED) ? true : false;
+    }
+
+    public void displayBoard() {
+        for (int i = 0; i < 3; ++i) {
+            for (int j = 0; j < 3; ++j) {
+                System.out.printf("%s ", board[i][j].getPlayer());
+            }
+            System.out.println();
+        }
+
+        System.out.println();
+    }
+
 }
